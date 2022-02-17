@@ -9,36 +9,34 @@ import Foundation
 
 class MovieViewModel {
     
-    private var apiService = ApiService()
+    private let apiService: ApiServiceProtocol
+    
+    // Injeção de dependência
+    init(apiService: ApiServiceProtocol) {
+        self.apiService = apiService
+    }
+    
     private var popularMovies = [Movie]()
     
-    func fetchPopularMoviesData(completion: @escaping() -> () ){
-        
-        apiService.getPopularMoviesData { [weak self] (result) in
-            
-        switch result {
-            
-        case .success(let listOf):
-            self?.popularMovies = listOf.movies
-            completion()
-            
-        case .failure(let error):
-            print("Error Processing json data: \(error)")
+    func fetchPopularMoviesData(completion: @escaping() -> () ) {
+        apiService.getPopularMoviesData { [weak self] result in
+            switch result {
+            case .success(let response):
+                self?.popularMovies = response.movies ?? []
+                completion()
+                
+            case .failure(let error):
+                print("Error Processing json data: \(error)")
+            }
         }
-        
-        }
-        
-    }
-
-    func numberOfRowsInSection(section: Int) -> Int {
-        if popularMovies.count != 0 {
-            return popularMovies.count
-        }
-        return 0
     }
     
-    func cellForRowAt (indexPath: IndexPath) -> Movie {
-        return popularMovies[indexPath.row]
+    func numberOfRows() -> Int {
+        popularMovies.count
     }
     
+    func cellForRow(at indexPath: IndexPath) -> Movie {
+        // popularMovies.indices.contains(indexPath.row)
+        popularMovies[indexPath.row]
+    }
 }
