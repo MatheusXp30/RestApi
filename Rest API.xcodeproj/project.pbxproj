@@ -18,6 +18,7 @@
 		13BDBBF027B038BB006259D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13BDBBEE27B038BB006259D5 /* LaunchScreen.storyboard */; };
 		13BDBBF827B03A1B006259D5 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BDBBF727B03A1B006259D5 /* MovieModel.swift */; };
 		969EAA0427BDD1EF009AC2F5 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EAA0327BDD1EF009AC2F5 /* String+Extensions.swift */; };
+		969EAA0627BDED67009AC2F5 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969EAA0527BDED67009AC2F5 /* MovieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		13BDBBF127B038BB006259D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13BDBBF727B03A1B006259D5 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		969EAA0327BDD1EF009AC2F5 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		969EAA0527BDED67009AC2F5 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				13BDBBE927B038B9006259D5 /* Main.storyboard */,
 				136F5DB027B1959B0066125E /* MovieTableViewCell.swift */,
+				969EAA0527BDED67009AC2F5 /* MovieView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				136F5DAB27B150540066125E /* ApiService.swift in Sources */,
 				136F5DB127B1959B0066125E /* MovieTableViewCell.swift in Sources */,
 				13BDBBE427B038B9006259D5 /* AppDelegate.swift in Sources */,
+				969EAA0627BDED67009AC2F5 /* MovieView.swift in Sources */,
 				969EAA0427BDD1EF009AC2F5 /* String+Extensions.swift in Sources */,
 				13BDBBE627B038B9006259D5 /* SceneDelegate.swift in Sources */,
 				13BDBBF827B03A1B006259D5 /* MovieModel.swift in Sources */,
